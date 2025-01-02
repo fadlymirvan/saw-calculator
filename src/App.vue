@@ -1,26 +1,34 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SawCalculator from "@/components/SawCalculator.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FooterComponent,
+    SawCalculator,
   }
 }
 </script>
 
+<template>
+  <div class="app d-flex flex-column vh-100">
+    <header>
+      <!-- Place Holder for future header -->
+    </header>
+
+    <main class="content">
+      <SawCalculator />
+    </main>
+
+    <FooterComponent />
+  </div>
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 </style>
